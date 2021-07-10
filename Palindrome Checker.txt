@@ -1,0 +1,16 @@
+function palindrome(str) {
+  let regex = /[a-zA-Z0-9]/g
+  let newStr = str.match(regex).join('').toLowerCase()
+  let revStr=[];
+  let j =0
+  for (let i = newStr.length-1;i>=0;i--){
+    revStr[j] = newStr[i]
+    j++
+  }
+  revStr=revStr.join('')
+  if (revStr === newStr){
+    return true; 
+  }
+  return false
+}
+palindrome("nope");

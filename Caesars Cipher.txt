@@ -1,0 +1,33 @@
+function rot13(str) {
+  let alphabet = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+  // let p =5
+  // console.log(alphabet[p+13])
+
+  let emptyStr=[]
+  for (let i =0;i<str.length;i++){
+    if (str[i]==' '|| str[i]=='!'|| str[i]=='.'|| str[i]=='?'){
+      emptyStr[i] = str[i]
+      console.log(emptyStr)
+      console.log('passed one')
+      
+    }else{
+      let oldLetter =str[i]
+	    let position = alphabet.indexOf(oldLetter)
+	    let newPosition = position + 13
+	    let newLetter = alphabet[newPosition]
+				
+      emptyStr[i] = newLetter
+      // console.log(emptyStr)
+    }
+  }
+  // console.log(alphabet.indexOf(newLetter)) 
+  console.log(emptyStr.join(''))
+  return emptyStr.join('');
+}
+
+
+console.log(isNaN(' '))
+
+
+
+rot13("SERR PBQR PNZC");
